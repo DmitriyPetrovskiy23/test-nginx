@@ -1,0 +1,6 @@
+[Unit]
+Description=Проверка доступности Nginx
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash %h/infra-lab/check-http.sh http://127.0.0.1:8081/health
